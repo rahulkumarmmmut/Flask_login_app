@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #007bff; /* Sets the background color to blue */
+            color: white; /* Adjusts the text color to white for better contrast */
+            text-align: center; /* Center aligns the content of the body, including your title */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Applies a font to the body content */
+        }
+        h1 {
+            margin-top: 50px; /* Adds space above the title */
+        }
+        a, a:visited {
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+            color: #000; /* Keeps the link text color as black for contrast */
+            background-color: #f2f2f2; /* Keeps the background of links light for contrast */
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #0056b3; /* Darker blue for a hover effect on links */
+            color: white; /* Changes text color to white on hover for better visibility */
+        }
+        /* Styles for the input fields, you can include these in your login and register templates */
+        input[type="text"], input[type="password"] {
+            width: 90%; /* Adjusts the width of input fields */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* Style for the submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 95%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login Auth System in Flask</h1>
+    <a href="{{url_for('login')}}">Login Page</a><br>
+    <a href="{{url_for('register')}}">Register Page</a><br>
+</body>
+</html>

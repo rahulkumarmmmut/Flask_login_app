@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #007bff; /* Sets the background color to blue */
+            color: #ffffff; /* Sets the text color to white for better contrast */
+            font-family: Arial, sans-serif; /* Use a simple, readable font */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers content horizontally */
+            justify-content: center; /* Centers content vertically */
+            min-height: 100vh; /* Makes sure the body takes up at least the full height of the viewport */
+            margin: 0; /* Removes default margin */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers form items vertically */
+            gap: 10px; /* Adds space between form items */
+        }
+        input[type="text"], input[type="password"], input[type="submit"] {
+            width: 200px; /* Sets a specific width for input fields */
+            padding: 10px; /* Adds some padding inside the input fields for aesthetics */
+            border-radius: 5px; /* Rounds the corners of the input fields */
+            border: 1px solid #ddd; /* Sets a light border for the input fields */
+            margin: 5px 0; /* Adds some margin around the input fields */
+        }
+        input[type="submit"] {
+            cursor: pointer; /* Changes the cursor to indicate the button is clickable */
+            background-color: #0056b3; /* Darker blue for the submit button */
+            color: white; /* White text color for better visibility */
+            border: none; /* Removes the border */
+        }
+        input[type="submit"]:hover {
+            background-color: #004494; /* Changes background color on hover for a visual effect */
+        }
+        a, a:visited {
+            color: #ffffff; /* Ensures the link is visible against the blue background */
+            text-decoration: underline; /* Underlines the link for better visibility */
+        }
+    </style>
+</head>
+<body>
+    <h1>Login Auth System in Flask</h1>
+    <h1>Login Page</h1>
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+        <div>{{form.username.label}} {{form.username(size=20, class_='username')}}</div>
+        <div>{{form.password.label}} {{form.password(size=20, class_='password')}}</div>
+        <div>{{form.submit(class_='submit')}}</div>
+    </form>
+    <a href="{{url_for('register')}}">Don't have an account? Sign Up</a><br>
+</body>
+</html>
